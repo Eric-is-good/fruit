@@ -1,0 +1,40 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="fruit:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/fruit_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="fruit/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="fruit" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.9" />
+          <element id="library" level="project" name="Maven: com.github.penggle:kaptcha:2.3.2" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.5" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+          <element id="library" level="project" name="Maven: com.jhlabs:filters:2.0.235-1" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.3" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
+          <element id="library" level="project" name="Maven: commons-dbutils:commons-dbutils:1.3" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.4" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.22" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.12" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.15.0" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.15.0" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.15.0" />
+          <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-spec:1.2.5" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
