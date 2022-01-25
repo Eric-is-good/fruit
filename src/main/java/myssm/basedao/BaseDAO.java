@@ -83,7 +83,8 @@ public abstract class BaseDAO<T> {
             if(insertFlag){
                 psmt = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             }else {
-                psmt = conn.prepareStatement(sql);
+                // 原来这里没有加 Statement.RETURN_GENERATED_KEYS
+                psmt = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             }
             setParams(psmt,params);
             int count = psmt.executeUpdate() ;

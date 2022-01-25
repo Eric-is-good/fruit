@@ -1,14 +1,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" th:href="@{static/css/add.css}">
+	<link rel="stylesheet" href="static/css/add.css">
 </head>
 <body>
 <div id="div_container">
 	<div id="div_fruit_list">
 		<p class="center f30">新增库存信息</p>
 		<!--<form action="add.do" method="post">-->
-		<form action="add.do" method="post">
+		<form action="fruit.do" method="post">
+			<input type="hidden" name="operate" value="add"/>
 			<table id="tbl_fruit">
 				<tr>
 					<th class="w20">名称：</th>
