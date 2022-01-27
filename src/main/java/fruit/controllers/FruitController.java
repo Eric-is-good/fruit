@@ -1,4 +1,4 @@
-package fruit.servlets;
+package fruit.controllers;
 
 import fruit.dao.FruitDAO;
 import fruit.dao.impl.FruitDAOImpl;
@@ -6,6 +6,7 @@ import fruit.pojo.Fruit;
 import myssm.myspringmvc.ViewBaseServlet;
 import myssm.util.StringUtil;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,40 +15,19 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/fruit.do")
-public class FruitServlet extends ViewBaseServlet {
-    private FruitDAO fruitDAO = new FruitDAOImpl();
+public class FruitController extends ViewBaseServlet {
 
-    @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //设置编码
-        request.setCharacterEncoding("UTF-8");
+    //之前FruitServlet是一个Sevlet组件，那么其中的init方法一定会被调用
+    //之前的init方法内部会出现一句话：super.init();
 
-        String operate = request.getParameter("operate");
-        if(StringUtil.isEmpty(operate)){
-            operate = "index" ;
-        }
+    private ServletContext servletContext ;
 
-        switch(operate){
-            case "index":
-                index(request,response);
-                break;
-            case "add":
-                add(request,response);
-                break;
-            case "del":
-                del(request,response);
-                break;
-            case "edit":
-                edit(request,response);
-                break;
-            case "update":
-                update(request,response);
-                break;
-            default:
-                throw new RuntimeException("operate值非法!");
-        }
+    public void setServletContext(ServletContext servletContext) throws ServletException {
+        this.servletContext = servletContext;
+        super.init(servletContext);
     }
+
+    private FruitDAO fruitDAO = new FruitDAOImpl();
 
     private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.设置编码
